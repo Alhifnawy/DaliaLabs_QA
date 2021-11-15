@@ -20,7 +20,7 @@ This is an automation task for the Email Subscription Widget for Dalia Task Webs
 6. Make sure pip is updated to the latest version using the following
 > python -m pip install --upgrade pip
 7. Install Requirments.txt file using the following command
-> python -m pip install --upgrade pip
+> python -m pip install -r requirements.txt
 8. Check the Requirments are installed using the following command
 > pip list
 9. Run the following command to execute the test cases
