@@ -5,7 +5,7 @@ Test Setup    Set Browser Capabilities
 Test Teardown    Close Browser
 
 *** Test Cases ***
-Email Subscription To Dalia
+Email_Subscription_To_Dalia
     [Tags]    Component=Email Subscription Widget
     ${email}    Ascii Company Email
     Check Email Subscription Widget Is Displayed
@@ -19,7 +19,7 @@ Email Subscription To Dalia
 #    Check Email Date Is Displayed in Homepage
 
 # TODO: Test case fails because the last assertion is not yet implemented
-Send Already Subscribed Email
+Send_Already_Subscribed_Email
     [Tags]    Component=Email Subscription Widget
     ${email}    Ascii Company Email
     Check Email Subscription Widget Is Displayed
@@ -33,14 +33,14 @@ Send Already Subscribed Email
 #    Check Email Is Displayed in Homepage    ${email}
 #    Check Email Date Is Displayed in Homepage
 
-    Open Browser    ${WEBSITE}    ${BROWSER}    first
+    Go To    ${WEBSITE}
     Check Email Subscription Widget Is Displayed
     Open Email Subscription Widget
     Enter Email Info To Dalia    ${email}
     Send Email
     Check Error Message Is Displayed    ${error_message_already_subscribed}
 
-Send Incorrect Email format
+Send_Incorrect_Email_format
     [Tags]    Component=Email Subscription Widget
     # Send an empty mail
     Check Email Subscription Widget Is Displayed
@@ -69,7 +69,7 @@ Send Incorrect Email format
     Send Email
     Check Error Message Is Displayed    ${error_message_three}
 
-Open Dalia Labs Website Through Email Subscription Widget
+Open_Dalia_Labs_Website_Through_Email_Subscription_Widget
     [Tags]    Component=Email Subscription Widget
     Check Email Subscription Widget Is Displayed
     Open Email Subscription Widget
